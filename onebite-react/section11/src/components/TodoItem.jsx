@@ -1,10 +1,10 @@
 import "./TodoItem.css";
 import { memo, useContext } from "react";
-import { TodoContext } from "../App";
+import { TodoDispatchContext } from "../App";
 
 // onUpdate와 onDelete의 경우 함수(=객체)이기 때문에 App 컴포넌트가 리렌더링 될 때 마다 매번 다시 생성되어 전달됨.
 const TodoItem = ({ id, isDone, content, date }) => {
-  const { onUpdate, onDelete } = useContext(TodoContext);
+  const { onUpdate, onDelete } = useContext(TodoDispatchContext);
   const onChangeCheckbox = () => {
     onUpdate(id);
   };
