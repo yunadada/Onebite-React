@@ -5,7 +5,7 @@ import HookExam from "./components/HookExam";
 function App() {
   return (
     <>
-      <HookExam />
+      <Register />
     </>
   );
 }
